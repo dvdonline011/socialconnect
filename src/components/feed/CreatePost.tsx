@@ -29,7 +29,7 @@ const CreatePost: React.FC<CreatePostProps> = ({
         <div className="flex-1 space-y-4">
           <textarea
             placeholder="What's on your mind?"
-            className="w-full min-h-[100px] resize-none bg-secondary rounded-lg p-3 text-sm"
+            className="w-full min-h-[100px] resize-none rounded-lg p-3 text-sm via-slate-400 to-orange-200 to-[35%] from-[#FFFFFF] text-[#4a5677]"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />

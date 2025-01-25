@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Bell,
@@ -50,11 +51,23 @@ const TopToolbar: React.FC<TopToolbarProps> = ({
         </div>
 
         <div className="flex items-center gap-2 w-[320px] justify-end">
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="relative">
             <MessageCircle className="h-5 w-5" />
+            <Badge
+              variant="destructive"
+              className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0"
+            >
+              3
+            </Badge>
           </Button>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
+            <Badge
+              variant="destructive"
+              className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0"
+            >
+              5
+            </Badge>
           </Button>
           <Avatar className="h-9 w-9">
             <AvatarImage src={userAvatar} />
